@@ -23,4 +23,3 @@ class Cypher {
     return newLetterCode <= 122 ? (char) newLetterCode: (char) (96 + newLetterCode % 122);
     }
 }
-
