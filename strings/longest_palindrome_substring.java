@@ -31,18 +31,18 @@ class Program {
 
     public static String longestPalindromicSubstring(String str) {
         int start = 0;
-            int end = 0;
+        int end = 0;
 
-            for (int i = 0; i < str.length(); i++) {
-                int odd = expandFromMiddle(str, i, i);
-                int even = expandFromMiddle(str, i, i+1);
-                int longest = Math.max(odd, even);
-                if (longest > end - start){
-                    start = i - ((longest-1) / 2);
-                    end = i + (longest / 2);
-                }
+        for (int i = 0; i < str.length(); i++) {
+            int odd = expandFromMiddle(str, i, i);
+            int even = expandFromMiddle(str, i, i+1);
+            int longest = Math.max(odd, even);
+            if (longest > end - start){
+                start = i - ((longest-1) / 2);
+                end = i + (longest / 2);
             }
-            return str.substring(start, end+1);
+        }
+        return str.substring(start, end+1);
     }
 
     public static int expandFromMiddle(String str, int left, int right){

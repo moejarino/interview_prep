@@ -15,7 +15,7 @@ class Substring {
 
         HashSet<Character> visited = new HashSet();
         // before the right pointer reaches the end
-        while (right < s.length()){
+        while (right < s.length()) {
             //if we havent seen the character, add it to visited
             if (!visited.contains(s.charAt(right))){
                 visited.add(s.charAt(right));
