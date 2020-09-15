@@ -12,7 +12,7 @@ class twosum {
 
     }
 
-    //Time O(N) | Space O(N)
+    //Time O(n log(n)) | Space O(N)
     public static List<int[]> twoSum(int[] nums, int k) {
 
         List<Integer[]> pairs = new ArrayList<Integer[]>();
@@ -40,3 +40,18 @@ class twosum {
         return pairs;
         }
     }
+
+    //Time O(N) | Space O(N)
+    public static int[] twoNumSum(int[] array, int target) {
+        Set<Integer> nums = new HashSet<>();
+        for (int num : array) {
+            int potentialMatch = target - num;
+            if (nums.contains(potentialMatch)) {
+                return new int[] {potentialMatch, num};
+            } else {
+                nums.add(num);
+            }
+        }
+        return new int[0];
+    }
+
