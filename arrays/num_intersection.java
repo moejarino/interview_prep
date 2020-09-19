@@ -1,4 +1,4 @@
- import java.util.*;
+import java.util.*;
 
 // Given two integer arrays, return their intersection.
 // Note: the intersection is the set of elements that are common to both arrays.
@@ -14,13 +14,12 @@ public class program {
     }
 
     //Time O(2n) | Space O(2n)
-    public static int[] intIntersection(int[] nums1, int[] nums2) {
+    public static List<Integer> intIntersection(int[] nums1, int[] nums2) {
 
         HashSet<Integer> visited = new HashSet<>();
 
         HashSet<Integer> set2 = new HashSet<Integer>();
 
-        //List<Integer> intersection = new ArrayList<>();
 
         for (int i : nums1) {
             visited.add(i);
@@ -33,15 +32,10 @@ public class program {
             }
         }
 
-        int[] result = new int[set2.size()];
-        int i=0;
-        for(int n: set2){
-            result[i++] = n;
-        }
+        List<Integer> intersection = new ArrayList<Integer>(set2);
 
-        return result;
 
-        //return intersection;
+        return intersection;
 
     }
 }
