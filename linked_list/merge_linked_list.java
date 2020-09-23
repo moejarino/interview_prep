@@ -24,7 +24,7 @@ class Program {
                 if (p1Prev != null) p1Prev.next = p2;
                 p1Prev = p2;
                 p2 = p2.next;
-                p1Prev.next  p1;
+                p1Prev.next = p1;
 
             }
         }
